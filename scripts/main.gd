@@ -27,9 +27,10 @@ func _process(_delta: float) -> void:
 	for pair in pairs:
 		var body: RigidBody3D = pair.body
 		var model: Node3D = pair.model
-		model.position = body.position + Vector3(0, MODEL_Y_OFFSET, 0)
 
 		var diff = body.position - model.position
+		model.position = body.position + Vector3(0, MODEL_Y_OFFSET, 0)
+
 		diff.y = 0
 		if diff.length_squared() > ROTATION_THRESHOLD * ROTATION_THRESHOLD:
 			model.look_at(model.position + diff, Vector3.UP)
@@ -55,6 +56,16 @@ func _input(event: InputEvent) -> void:
 	if event.keycode == KEY_ENTER:
 		if selected_bodies.is_empty():
 			target_index = (target_index + 1) % pairs.size()
+		return
+
+	if event.keycode == KEY_SPACE:
+		for pair in pairs:
+			var random_direction = Vector3(
+				randf_range(-1.0, 1.0),
+				0,
+				randf_range(-1.0, 1.0)
+			).normalized()
+			pair.body.apply_central_impulse(random_direction * 8)
 		return
 
 	var direction = Vector3.ZERO

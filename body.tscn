@@ -5,6 +5,7 @@
 [sub_resource type="SphereMesh" id="SphereMesh_7mycd"]
 
 [node name="Body" type="RigidBody3D"]
+angular_damp = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_lquwl")
