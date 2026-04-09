@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gm5gcgsa0m5"
-path="res://.godot/imported/storm.gltf-fce9bfa6e30f01a3a4bc1e62046b2853.scn"
+uid="uid://b7u1pjjrnbpgi"
+path="res://.godot/imported/ramirez.gltf-f5e59f7d4ff1567430230d19e638ea50.scn"
 
 [deps]
 
-source_file="res://assets/storm.gltf"
-dest_files=["res://.godot/imported/storm.gltf-fce9bfa6e30f01a3a4bc1e62046b2853.scn"]
+source_file="res://assets/cars/ramirez.gltf"
+dest_files=["res://.godot/imported/ramirez.gltf-f5e59f7d4ff1567430230d19e638ea50.scn"]
 
 [params]
 

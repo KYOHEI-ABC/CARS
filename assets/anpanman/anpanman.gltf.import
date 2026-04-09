@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c6vm65c3gd7i"
-path="res://.godot/imported/mcqueen.gltf-152a4424ac600f2f4ec8f1666d4b8ebe.scn"
+uid="uid://bxkfkvqh18lxo"
+path="res://.godot/imported/anpanman.gltf-fa3bf48d9ea94e2e375d2aa50593791c.scn"
 
 [deps]
 
-source_file="res://assets/mcqueen.gltf"
-dest_files=["res://.godot/imported/mcqueen.gltf-152a4424ac600f2f4ec8f1666d4b8ebe.scn"]
+source_file="res://assets/anpanman/anpanman.gltf"
+dest_files=["res://.godot/imported/anpanman.gltf-fa3bf48d9ea94e2e375d2aa50593791c.scn"]
 
 [params]
 

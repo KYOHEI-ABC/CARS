@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dglw1m5i2ma38"
-path="res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"
+uid="uid://b3i61r2fwmltm"
+path="res://.godot/imported/mcqueen_0.png-e3129a647ffe80af9be558cf2fadf30a.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "1576827e1788155a8da32f86b66d1e72"
 }
 
 [deps]
 
-source_file="res://assets/ground.png"
-dest_files=["res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"]
+source_file="res://assets/cars/mcqueen_0.png"
+dest_files=["res://.godot/imported/mcqueen_0.png-e3129a647ffe80af9be558cf2fadf30a.ctex"]
 
 [params]
 

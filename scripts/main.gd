@@ -89,4 +89,6 @@ func _input(event: InputEvent) -> void:
 	if direction != Vector3.ZERO:
 		var bodies = selected_bodies if not selected_bodies.is_empty() else [pairs[target_index].body]
 		for body in bodies:
-			body.apply_central_impulse(direction)
+			if body.linear_velocity.length_squared() > 100:
+				continue
+			body.apply_central_impulse(direction * 8)

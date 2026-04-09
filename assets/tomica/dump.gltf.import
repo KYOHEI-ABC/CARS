@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7u1pjjrnbpgi"
-path="res://.godot/imported/ramirez.gltf-0c8dea859491f82bf050868beaa5af57.scn"
+uid="uid://fq2pdp3hgiea"
+path="res://.godot/imported/dump.gltf-a4215a804e3f2177fff0ba7ab6b544c3.scn"
 
 [deps]
 
-source_file="res://assets/ramirez.gltf"
-dest_files=["res://.godot/imported/ramirez.gltf-0c8dea859491f82bf050868beaa5af57.scn"]
+source_file="res://assets/tomica/dump.gltf"
+dest_files=["res://.godot/imported/dump.gltf-a4215a804e3f2177fff0ba7ab6b544c3.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=2.0
 nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
