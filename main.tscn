@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bspiqu0w7xcr"]
+[gd_scene load_steps=22 format=3 uid="uid://bspiqu0w7xcr"]
 
 [ext_resource type="Script" uid="uid://dn1ec5l4c3v3g" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dglw1m5i2ma38" path="res://assets/sprites/ground.png" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c6vm65c3gd7i" path="res://assets/cars/mcqueen.gltf" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://gm5gcgsa0m5" path="res://assets/cars/storm.gltf" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://msb3crunybhr" path="res://dash_zone.tscn" id="3_w48qg"]
 [ext_resource type="PackedScene" uid="uid://b7u1pjjrnbpgi" path="res://assets/cars/ramirez.gltf" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cg2xt7ehuxyrw" path="res://assets/tomica/buru.gltf" id="6_kek77"]
 [ext_resource type="PackedScene" uid="uid://fq2pdp3hgiea" path="res://assets/tomica/dump.gltf" id="7_4c57u"]
@@ -89,6 +90,18 @@ fov = 30.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment/Camera3D"]
 transform = Transform3D(0.848048, -0.280814, 0.449397, 0, 0.848048, 0.529919, -0.529919, -0.449397, 0.719186, 128, 0, 0)
 shadow_enabled = true
+
+[node name="Area3D" parent="Environment" instance=ExtResource("3_w48qg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Area3D2" parent="Environment" instance=ExtResource("3_w48qg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, -9)
+
+[node name="Area3D3" parent="Environment" instance=ExtResource("3_w48qg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -14, 0, -9)
+
+[node name="Area3D4" parent="Environment" instance=ExtResource("3_w48qg")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -15, 0, 0)
 
 [node name="Models" type="Node" parent="."]
 
