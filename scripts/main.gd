@@ -3,7 +3,7 @@ extends Node
 
 const ROTATION_THRESHOLD: float = 0.03
 const MODEL_Y_OFFSET: float = -0.5
-const SELECTION_DISTANCE: float = 8.0
+const SELECTION_DISTANCE: float = 5.0
 
 @export var camera: Camera3D
 @export var models_node: Node

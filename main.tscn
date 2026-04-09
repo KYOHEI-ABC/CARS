@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bspiqu0w7xcr"]
+[gd_scene load_steps=10 format=3 uid="uid://bspiqu0w7xcr"]
 
 [ext_resource type="Script" uid="uid://dn1ec5l4c3v3g" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dglw1m5i2ma38" path="res://assets/ground.png" id="2_0xm2m"]
@@ -18,6 +18,9 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_0xm2m")
 size = Vector3(64, 1, 64)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(64, 64, 4)
+
 [node name="Main" type="Node" node_paths=PackedStringArray("camera", "models_node")]
 script = ExtResource("1_ig7tw")
 camera = NodePath("Environment/Camera3D")
@@ -33,6 +36,22 @@ shape = SubResource("BoxShape3D_ig7tw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_0xm2m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, 0)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 0, 0)
+shape = SubResource("BoxShape3D_lquwl")
 
 [node name="Camera3D" type="Camera3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 15)
