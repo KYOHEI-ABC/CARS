@@ -39,6 +39,8 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 15)
 fov = 30.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment/Camera3D"]
+transform = Transform3D(0.848048, -0.280814, 0.449397, 0, 0.848048, 0.529919, -0.529919, -0.449397, 0.719186, 128, 0, 0)
+shadow_enabled = true
 
 [node name="Models" type="Node" parent="."]
 

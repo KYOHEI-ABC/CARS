@@ -27,6 +27,9 @@ func _process(_delta: float) -> void:
 	for pair in pairs:
 		var body: RigidBody3D = pair.body
 		var model: Node3D = pair.model
+		if -0.01 < body.linear_velocity.y and body.linear_velocity.y < 0.01:
+			if randf() < 0.008:
+				body.apply_central_impulse(Vector3(0, 5, 0))
 
 		var diff = body.position - model.position
 		model.position = body.position + Vector3(0, MODEL_Y_OFFSET, 0)
