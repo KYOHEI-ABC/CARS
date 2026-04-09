@@ -16,6 +16,6 @@ run/max_fps=60
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=640
+window/size/viewport_width=1500
+window/size/viewport_height=1000
 window/stretch/mode="viewport"

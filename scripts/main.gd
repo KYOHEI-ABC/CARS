@@ -22,6 +22,14 @@ func _ready() -> void:
 		body.visible = false
 		pairs.append({"body": body, "model": model})
 
+	for pair in pairs:
+		var random_direction = Vector3(
+			randf_range(-1.0, 1.0),
+			0,
+			randf_range(-1.0, 1.0)
+		).normalized()
+		pair.body.apply_central_impulse(random_direction * 8)
+
 func _process(_delta: float) -> void:
 	camera.position = pairs[target_index].body.position + camera_offset
 	for pair in pairs:
