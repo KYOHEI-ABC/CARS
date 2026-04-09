@@ -1,7 +1,7 @@
 {
 	"files.exclude": {
 		".godot/": true,
-		"**/*.import": true,
+		// "**/*.import": true,
 		"**/*.uid": true
 	},
 	"editor.formatOnSave": true,
