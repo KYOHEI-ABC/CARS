@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bspiqu0w7xcr"]
+[gd_scene load_steps=21 format=3 uid="uid://bspiqu0w7xcr"]
 
 [ext_resource type="Script" uid="uid://dn1ec5l4c3v3g" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dglw1m5i2ma38" path="res://assets/sprites/ground.png" id="2_0xm2m"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://fq2pdp3hgiea" path="res://assets/tomica/dump.gltf" id="7_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cddmfc0f24fsj" path="res://assets/tomica/police.gltf" id="8_efxa6"]
 [ext_resource type="PackedScene" uid="uid://ck5pa4nuxhx1e" path="res://assets/tomica/shobel.gltf" id="9_dg77c"]
+[ext_resource type="PackedScene" uid="uid://du4ajxgdjp0eg" path="res://anpanman_body.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bxkfkvqh18lxo" path="res://assets/anpanman/anpanman.gltf" id="11_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://b4kmesg78p5g8" path="res://assets/anpanman/baikinman.gltf" id="12_w48qg"]
+[ext_resource type="PackedScene" uid="uid://ci85aing7h811" path="res://assets/anpanman/dokin.gltf" id="13_vivmo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
 size = Vector3(64, 1, 64)
@@ -101,3 +105,23 @@ shadow_enabled = true
 [node name="blockbench_export6" parent="Models" instance=ExtResource("8_efxa6")]
 
 [node name="blockbench_export7" parent="Models" instance=ExtResource("9_dg77c")]
+
+[node name="Anpanman" type="Node" parent="."]
+
+[node name="RigidBody3D" parent="Anpanman" instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+
+[node name="blockbench_export" parent="Anpanman/RigidBody3D" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
+
+[node name="RigidBody3D2" parent="Anpanman" instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="blockbench_export" parent="Anpanman/RigidBody3D2" instance=ExtResource("12_w48qg")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
+
+[node name="RigidBody3D3" parent="Anpanman" instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+
+[node name="blockbench_export" parent="Anpanman/RigidBody3D3" instance=ExtResource("13_vivmo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
