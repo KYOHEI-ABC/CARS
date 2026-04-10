@@ -8,8 +8,10 @@ const MODELS: Array[PackedScene] = [
 	preload("res://assets/tomica/buru.gltf"),
 	preload("res://assets/tomica/dump.gltf"),
 	preload("res://assets/tomica/police.gltf"),
-	preload("res://assets/tomica/shobel.gltf")
-
+	preload("res://assets/tomica/shobel.gltf"),
+	preload("res://assets/anpanman/anpanman.gltf"),
+	preload("res://assets/anpanman/baikinman.gltf"),
+	preload("res://assets/anpanman/dokin.gltf"),
 ]
 var index: int = 0
 
@@ -69,6 +71,21 @@ func _physics_process(delta: float) -> void:
 	elif index == 6:
 		var phase = (2.0 * PI * Time.get_ticks_msec()) / 1000.0
 		model.get_child(4).rotation.x = deg_to_rad(60) + (deg_to_rad(30) * sin(phase))
+	elif index >= 7:
+		var arms: Array[Node3D] = []
+		var legs: Array[Node3D] = []
+		arms = [model.get_node("RightArm"), model.get_node("LeftArm")]
+		legs = [model.get_node("RightLeg"), model.get_node("LeftLeg")]
+		var progress = sin(2.0 * PI * Time.get_ticks_msec() / 500.0)
+		arms[0].rotation_degrees.x = 45 * progress
+		arms[1].rotation_degrees.x = -45 * progress
+		legs[0].rotation_degrees.x = -45 * progress
+		legs[1].rotation_degrees.x = 45 * progress
+		
+	if -0.01 < body.linear_velocity.y and body.linear_velocity.y < 0.01:
+		if randf() < 0.008:
+			body.apply_central_impulse(Vector3(0, 8, 0))
+
 
 func _on_body_entered(_body: Node) -> void:
 	if _body is StaticBody3D:
