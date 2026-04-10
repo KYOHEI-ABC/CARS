@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://84mbjc260tx5"
-path.s3tc="res://.godot/imported/police_0.png-bdfcbe33152f5f9b7cbd751144344ec8.s3tc.ctex"
+path="res://.godot/imported/police_0.png-bdfcbe33152f5f9b7cbd751144344ec8.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "9b917843e81498b7c4af4ac3cae0cd06"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tomica/police_0.png"
-dest_files=["res://.godot/imported/police_0.png-bdfcbe33152f5f9b7cbd751144344ec8.s3tc.ctex"]
+dest_files=["res://.godot/imported/police_0.png-bdfcbe33152f5f9b7cbd751144344ec8.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

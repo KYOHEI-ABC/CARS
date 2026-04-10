@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvy0ir1is73sm"
-path.s3tc="res://.godot/imported/shobel_0.png-d63f224cf6fd72c22b7d087099e8ba92.s3tc.ctex"
+path="res://.godot/imported/shobel_0.png-d63f224cf6fd72c22b7d087099e8ba92.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "87558244f8437963b7367d2499229771"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tomica/shobel_0.png"
-dest_files=["res://.godot/imported/shobel_0.png-d63f224cf6fd72c22b7d087099e8ba92.s3tc.ctex"]
+dest_files=["res://.godot/imported/shobel_0.png-d63f224cf6fd72c22b7d087099e8ba92.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

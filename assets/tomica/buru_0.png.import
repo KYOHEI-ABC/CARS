@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwbv1sehfcgfc"
-path.s3tc="res://.godot/imported/buru_0.png-d60db71ac57965647e5b37faeaffb7dd.s3tc.ctex"
+path="res://.godot/imported/buru_0.png-d60db71ac57965647e5b37faeaffb7dd.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "8906f2047f9f81a7ada3b93826a8fe9c"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tomica/buru_0.png"
-dest_files=["res://.godot/imported/buru_0.png-d60db71ac57965647e5b37faeaffb7dd.s3tc.ctex"]
+dest_files=["res://.godot/imported/buru_0.png-d60db71ac57965647e5b37faeaffb7dd.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

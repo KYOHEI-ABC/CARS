@@ -1,19 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://bspiqu0w7xcr"]
+[gd_scene load_steps=10 format=3 uid="uid://bspiqu0w7xcr"]
 
 [ext_resource type="Script" uid="uid://dn1ec5l4c3v3g" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dglw1m5i2ma38" path="res://assets/sprites/ground.png" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://c6vm65c3gd7i" path="res://assets/cars/mcqueen.gltf" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://gm5gcgsa0m5" path="res://assets/cars/storm.gltf" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://msb3crunybhr" path="res://dash_zone.tscn" id="3_w48qg"]
-[ext_resource type="PackedScene" uid="uid://b7u1pjjrnbpgi" path="res://assets/cars/ramirez.gltf" id="5_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cg2xt7ehuxyrw" path="res://assets/tomica/buru.gltf" id="6_kek77"]
-[ext_resource type="PackedScene" uid="uid://fq2pdp3hgiea" path="res://assets/tomica/dump.gltf" id="7_4c57u"]
-[ext_resource type="PackedScene" uid="uid://cddmfc0f24fsj" path="res://assets/tomica/police.gltf" id="8_efxa6"]
-[ext_resource type="PackedScene" uid="uid://ck5pa4nuxhx1e" path="res://assets/tomica/shobel.gltf" id="9_dg77c"]
-[ext_resource type="PackedScene" uid="uid://du4ajxgdjp0eg" path="res://anpanman_body.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://bxkfkvqh18lxo" path="res://assets/anpanman/anpanman.gltf" id="11_ycdy4"]
-[ext_resource type="PackedScene" uid="uid://b4kmesg78p5g8" path="res://assets/anpanman/baikinman.gltf" id="12_w48qg"]
-[ext_resource type="PackedScene" uid="uid://ci85aing7h811" path="res://assets/anpanman/dokin.gltf" id="13_vivmo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
 size = Vector3(64, 1, 64)
@@ -40,10 +28,8 @@ albedo_color = Color(0.5, 0.5, 0.5, 1)
 material = SubResource("StandardMaterial3D_272bh")
 size = Vector3(32, 8, 64)
 
-[node name="Main" type="Node" node_paths=PackedStringArray("camera", "models_node")]
+[node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
-camera = NodePath("Environment/Camera3D")
-models_node = NodePath("Models")
 
 [node name="Environment" type="Node" parent="."]
 
@@ -84,57 +70,9 @@ shape = SubResource("BoxShape3D_7mycd")
 mesh = SubResource("BoxMesh_5vw27")
 
 [node name="Camera3D" type="Camera3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 6, 10)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 6, 12)
 fov = 30.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment/Camera3D"]
 transform = Transform3D(0.848048, -0.280814, 0.449397, 0, 0.848048, 0.529919, -0.529919, -0.449397, 0.719186, 128, 0, 0)
 shadow_enabled = true
-
-[node name="Area3D" parent="Environment" instance=ExtResource("3_w48qg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-
-[node name="Area3D2" parent="Environment" instance=ExtResource("3_w48qg")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, -9)
-
-[node name="Area3D3" parent="Environment" instance=ExtResource("3_w48qg")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -14, 0, -9)
-
-[node name="Area3D4" parent="Environment" instance=ExtResource("3_w48qg")]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -15, 0, 0)
-
-[node name="Models" type="Node" parent="."]
-
-[node name="blockbench_export" parent="Models" instance=ExtResource("3_h2yge")]
-
-[node name="blockbench_export2" parent="Models" instance=ExtResource("5_7mycd")]
-
-[node name="blockbench_export3" parent="Models" instance=ExtResource("3_lquwl")]
-
-[node name="blockbench_export4" parent="Models" instance=ExtResource("6_kek77")]
-
-[node name="blockbench_export5" parent="Models" instance=ExtResource("7_4c57u")]
-
-[node name="blockbench_export6" parent="Models" instance=ExtResource("8_efxa6")]
-
-[node name="blockbench_export7" parent="Models" instance=ExtResource("9_dg77c")]
-
-[node name="Anpanman" type="Node" parent="."]
-
-[node name="RigidBody3D" parent="Anpanman" instance=ExtResource("10_4c57u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
-
-[node name="blockbench_export" parent="Anpanman/RigidBody3D" instance=ExtResource("11_ycdy4")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
-
-[node name="RigidBody3D2" parent="Anpanman" instance=ExtResource("10_4c57u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
-
-[node name="blockbench_export" parent="Anpanman/RigidBody3D2" instance=ExtResource("12_w48qg")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
-
-[node name="RigidBody3D3" parent="Anpanman" instance=ExtResource("10_4c57u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
-
-[node name="blockbench_export" parent="Anpanman/RigidBody3D3" instance=ExtResource("13_vivmo")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
