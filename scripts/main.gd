@@ -49,7 +49,7 @@ func _input(event: InputEvent) -> void:
 			var target_pos = characters[target_index].body.position
 			target_indexes.clear()
 			for i in range(characters.size()):
-				if target_pos.distance_to(characters[i].body.position) <= 10:
+				if target_pos.distance_to(characters[i].body.position) <= 16:
 					target_indexes.append(i)
 		else:
 			target_indexes.clear()
@@ -67,7 +67,7 @@ func _input(event: InputEvent) -> void:
 				randf_range(-1.0, 1.0)
 			).normalized()
 			if chara.body.linear_velocity.length_squared() <= 128:
-				chara.body.apply_central_impulse(random_direction * 8)
+				chara.body.apply_central_impulse(random_direction * 16)
 
 	var direction = Vector3.ZERO
 	if event.pressed:
