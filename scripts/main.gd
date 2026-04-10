@@ -18,15 +18,21 @@ func _ready() -> void:
 		add_child(character)
 		character.body.position.x = (randf() - 0.5) * 50
 		character.body.position.z = (randf() - 0.5) * 50
+		character.body.position.y = 16
 
-	for i in range(16):
-		add_child(load("res://ball.tscn").instantiate())
+	for i in range(32):
+		var ball = load("res://ball.tscn").instantiate()
+		add_child(ball)
+		ball.position.x = (randf() - 0.5) * 50
+		ball.position.z = (randf() - 0.5) * 50
+		ball.position.y = 16
 
 	for i in range(32):
 		var dz = load("res://dash_zone.tscn").instantiate()
 		add_child(dz)
 		dz.position.x = (randf() - 0.5) * 50
 		dz.position.z = (randf() - 0.5) * 50
+
 		dz.rotation.y = deg_to_rad(randf() * 360)
 
 

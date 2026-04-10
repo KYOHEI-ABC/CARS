@@ -18,8 +18,9 @@ radius = 1.0
 height = 2.0
 
 [node name="RigidBody3D" type="RigidBody3D"]
-mass = 0.8
+mass = 1.2
 physics_material_override = SubResource("PhysicsMaterial_cbx31")
+gravity_scale = 1.5
 script = ExtResource("1_x8fbi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
