@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bspiqu0w7xcr"]
+[gd_scene load_steps=11 format=3 uid="uid://bspiqu0w7xcr"]
 
 [ext_resource type="Script" uid="uid://dn1ec5l4c3v3g" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dglw1m5i2ma38" path="res://assets/sprites/ground.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://coepeduvwlyua" path="res://dash_zone.tscn" id="3_h2yge"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
 size = Vector3(64, 1, 64)
@@ -76,3 +77,15 @@ fov = 30.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment/Camera3D"]
 transform = Transform3D(0.848048, -0.280814, 0.449397, 0, 0.848048, 0.529919, -0.529919, -0.449397, 0.719186, 128, 0, 0)
 shadow_enabled = true
+
+[node name="Area3D" parent="Environment" instance=ExtResource("3_h2yge")]
+transform = Transform3D(-2, 0, -1.78814e-07, 0, 2, 0, 1.78814e-07, 0, -2, -15, 0, -9)
+
+[node name="Area3D2" parent="Environment" instance=ExtResource("3_h2yge")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -6, 0, -9)
+
+[node name="Area3D3" parent="Environment" instance=ExtResource("3_h2yge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6, 0, 0)
+
+[node name="Area3D4" parent="Environment" instance=ExtResource("3_h2yge")]
+transform = Transform3D(5.96046e-08, 0, -2, 0, 2, 0, 2, 0, 5.96046e-08, -15, 0, 0)
