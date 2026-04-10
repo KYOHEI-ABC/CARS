@@ -16,6 +16,7 @@ material = SubResource("StandardMaterial3D_txmpf")
 size = Vector3(1, 0.2, 1)
 
 [node name="Area3D" type="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_ynbs7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
